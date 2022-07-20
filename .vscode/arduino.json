@@ -1,3 +1,7 @@
 {
-    "port": "/dev/ttyS0"
+    "port": "/dev/ttyUSB0",
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "programmer": "arduino:avrisp",
+    "sketch": "luchtzuivering/luchtzuiveringSketch/luchtzuiveringSketch.ino"
 }

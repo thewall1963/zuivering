@@ -1,9 +1,15 @@
 #include <sps30.h>
 #include <LiquidCrystal.h>
 
+int ret;
 // nano 3
 // old bootloader ATmega 328P
 // usb /dev/cu.usbserial-1410
+//
+// on linux stk500=recv(): erroros
+// met dmesg zag ik dat ttyUSB0 steeds werd ingepikt door brltty process. met sudo apt remove brltty   
+// dit verwijderd en nu heb ik ttyUSB0 aan de praat         
+
 // Bij PM1: 40 ug schakelt de unit in en bij PM1: 10 ug gaat hij pas weer uit.
 
 // TODO
@@ -67,7 +73,7 @@ unsigned long uitTijd = 0; //hold the time value when the manual overide OFF is 
 
 void setup() {
   
-  s16 ret;        // return value when probing the SPS30
+  //s16 ret;        // return value when probing the SPS30
   u8 auto_clean_days = 4;
   u32 auto_clean;
 
@@ -84,14 +90,16 @@ void setup() {
   pinMode(relayPin, OUTPUT);
 
   Serial.begin(57600);
-  //delay(2000);
-  
+  delay(2000);
+  Serial.println("here we go");
+
+/*  
   while (sps30_probe() != 0) {
     Serial.print("SPS sensor probing failed\n");
     lcd.print("SPS probe error");
     delay(500);
   }
-
+*/
 
   Serial.print("SPS sensor probing successful\n");
   lcd.clear();
@@ -134,8 +142,8 @@ void loop() {
  
   struct sps30_measurement m;
   u16 data_ready;
-  s16 ret;
-
+  //s16 ret;
+  int ret;
   unsigned long currentMillis = millis();
 
   if (currentMillis - previousMillis >= interval) {
