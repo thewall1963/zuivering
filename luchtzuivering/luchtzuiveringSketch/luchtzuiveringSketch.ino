@@ -139,7 +139,7 @@ void setup() {
 
 
 void loop() {
- 
+      
   struct sps30_measurement m;
   u16 data_ready;
   //s16 ret;
