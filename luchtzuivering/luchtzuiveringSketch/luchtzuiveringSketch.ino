@@ -1,5 +1,6 @@
 #include <sps30.h>
 #include <LiquidCrystal.h>
+#include <FastLED.h>
 
 int ret;
 // nano 3
@@ -99,7 +100,7 @@ void setup() {
     lcd.print("SPS probe error");
     delay(500);
   }
-*/
+
 
   Serial.print("SPS sensor probing successful\n");
   lcd.clear();
@@ -132,6 +133,7 @@ void setup() {
   }
   delay(1500);
   lcd.clear();
+  */
 }
 
 

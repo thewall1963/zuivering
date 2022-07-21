@@ -31,6 +31,7 @@
                 "/home/thewall/arduino-1.8.5/hardware/arduino/avr/variants/eightanaloginputs",
                 "/home/thewall/Arduino/libraries/sensirion-sps",
                 "/home/thewall/arduino-1.8.5/libraries/LiquidCrystal/src",
+                "/home/thewall/arduino-1.8.5/libraries/FastLED-3.5.0/src",
                 "/home/thewall/arduino-1.8.5/hardware/tools/avr/lib/gcc/avr/4.9.2/include",
                 "/home/thewall/arduino-1.8.5/hardware/tools/avr/lib/gcc/avr/4.9.2/include-fixed",
                 "/home/thewall/arduino-1.8.5/hardware/tools/avr/avr/include"
